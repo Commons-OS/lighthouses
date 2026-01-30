@@ -1,5 +1,6 @@
 ---
 title: Mondragon Corporation
+type: organization
 tagline: The world's largest worker cooperative
 description: A federation of worker cooperatives in the Basque Country, demonstrating that democratic ownership can work at scale.
 country: Spain (Basque Country)

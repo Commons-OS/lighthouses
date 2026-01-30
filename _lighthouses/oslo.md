@@ -1,5 +1,6 @@
 ---
 title: Oslo
+type: city
 tagline: Europe's green capital
 description: Norway's capital leading the transition to zero-emission transport, car-free streets, and climate-positive urban development.
 country: Norway

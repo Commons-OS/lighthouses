@@ -1,5 +1,6 @@
 ---
 title: Patagonia
+type: organization
 tagline: "We're in business to save our home planet"
 description: An outdoor apparel company that pioneered environmental activism in business, now owned by a trust dedicated to fighting climate change.
 country: United States

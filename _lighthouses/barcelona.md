@@ -1,5 +1,6 @@
 ---
 title: Barcelona
+type: city
 tagline: Digital sovereignty and participatory democracy
 description: A Mediterranean city pioneering digital commons, participatory budgeting, and the "fearless city" movement.
 country: Spain (Catalonia)

@@ -1,5 +1,6 @@
 ---
 title: Vienna
+type: city
 tagline: Social housing as urban commons
 description: The Austrian capital where 60% of residents live in subsidized housing, demonstrating that housing can be a public good, not a commodity.
 country: Austria

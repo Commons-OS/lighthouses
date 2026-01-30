@@ -1,5 +1,6 @@
 ---
 title: Buurtzorg
+type: organization
 tagline: Revolutionizing healthcare through self-managing teams
 description: A Dutch home healthcare organization that transformed the industry through radical decentralization and nurse-led care teams.
 country: Netherlands
