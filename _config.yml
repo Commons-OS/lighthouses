@@ -11,10 +11,10 @@ highlighter: rouge
 collections:
   organizations:
     output: true
-    permalink: /organizations/:slug/
+    permalink: /:collection/:slug/
   cities:
     output: true
-    permalink: /cities/:slug/
+    permalink: /:collection/:slug/
 
 # Defaults
 defaults:

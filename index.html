@@ -211,7 +211,7 @@ title: Lighthouse Engine - Commons OS
   
   <div class="lighthouse-grid">
     {% for org in site.organizations %}
-    <a href="{{ org.url }}" class="lighthouse-card">
+    <a href="{{ site.baseurl }}{{ org.url }}" class="lighthouse-card">
       <div class="card-header">
         <div class="category">Organization</div>
         <h3>{{ org.title }}</h3>
@@ -244,7 +244,7 @@ title: Lighthouse Engine - Commons OS
   
   <div class="lighthouse-grid">
     {% for city in site.cities %}
-    <a href="{{ city.url }}" class="lighthouse-card">
+    <a href="{{ site.baseurl }}{{ city.url }}" class="lighthouse-card">
       <div class="card-header">
         <div class="category">City</div>
         <h3>{{ city.title }}</h3>
