@@ -39,18 +39,67 @@ title: Lighthouse Engine - Commons OS
     line-height: 1.6;
   }
 
+  /* Stats Bar */
+  .stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 25px 20px;
+    margin: 30px 0;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  }
+  
+  .stat {
+    text-align: center;
+  }
+  
+  .stat .circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    font-size: 1.6em;
+    font-weight: 700;
+    color: white;
+    background: var(--lighthouse-green);
+  }
+  
+  .stat .label {
+    color: var(--text-muted);
+    font-size: 0.9em;
+    font-weight: 500;
+  }
+
   .section {
     margin-bottom: 60px;
   }
   
-  .section h2 {
-    font-size: 1.8em;
-    color: var(--text-dark);
-    margin-bottom: 10px;
-    font-weight: 500;
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
   }
   
-  .section h2::after {
+  .section-header h2 {
+    font-size: 1.8em;
+    color: var(--text-dark);
+    margin: 0;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .section-header h2::after {
     content: '';
     display: block;
     width: 60px;
@@ -58,6 +107,15 @@ title: Lighthouse Engine - Commons OS
     background: var(--lighthouse-green);
     margin-top: 10px;
     border-radius: 2px;
+  }
+  
+  .section-header .count-badge {
+    background: var(--lighthouse-light);
+    color: var(--lighthouse-dark);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
   }
   
   .section .subtitle {
@@ -191,12 +249,46 @@ title: Lighthouse Engine - Commons OS
     background: var(--lighthouse-dark);
     transform: translateY(-2px);
   }
+
+  /* Footer */
+  .home-footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-muted);
+    border-top: 1px solid #eee;
+    margin-top: 50px;
+  }
+  
+  .home-footer a {
+    color: var(--lighthouse-green);
+    text-decoration: none;
+  }
+  
+  .home-footer a:hover {
+    text-decoration: underline;
+  }
 </style>
 
 <div class="hero">
-  <div class="icon">🗼</div>
+  <div class="icon">🏠</div>
   <h1>Lighthouse Engine</h1>
   <p class="tagline">Organizations and cities leading the way in commons. Real-world examples that prove another way is possible.</p>
+</div>
+
+<!-- Stats Bar -->
+<div class="stats-bar">
+  <div class="stat">
+    <div class="circle">{{ site.organizations | size }}</div>
+    <div class="label">Organizations</div>
+  </div>
+  <div class="stat">
+    <div class="circle">{{ site.cities | size }}</div>
+    <div class="label">Cities</div>
+  </div>
+  <div class="stat">
+    <div class="circle">∞</div>
+    <div class="label">Growing</div>
+  </div>
 </div>
 
 <div class="intro-box">
@@ -206,7 +298,10 @@ title: Lighthouse Engine - Commons OS
 </div>
 
 <div class="section">
-  <h2>🏢 Organizations</h2>
+  <div class="section-header">
+    <h2>🏢 Organizations</h2>
+    <span class="count-badge">{{ site.organizations | size }} Lighthouses</span>
+  </div>
   <p class="subtitle">Companies, cooperatives, and institutions embodying commons principles</p>
   
   <div class="lighthouse-grid">
@@ -239,7 +334,10 @@ title: Lighthouse Engine - Commons OS
 </div>
 
 <div class="section">
-  <h2>🏙️ Cities</h2>
+  <div class="section-header">
+    <h2>🏙️ Cities</h2>
+    <span class="count-badge">{{ site.cities | size }} Lighthouses</span>
+  </div>
   <p class="subtitle">Urban areas pioneering commons-based governance and infrastructure</p>
   
   <div class="lighthouse-grid">
@@ -274,5 +372,14 @@ title: Lighthouse Engine - Commons OS
 <div class="cta-section">
   <h3>Know a Lighthouse?</h3>
   <p>Help us document organizations and cities that embody commons patterns.</p>
-  <a href="https://github.com/Commons-OS/lighthouses/issues/new" target="_blank">Suggest a Lighthouse</a>
+  <a href="https://github.com/Commons-OS/lighthouses/issues/new?template=suggest-lighthouse.md&title=[Lighthouse Suggestion]" target="_blank">Suggest a Lighthouse</a>
+</div>
+
+<!-- Footer -->
+<div class="home-footer">
+  <p>
+    Commons OS is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC-BY-SA-4.0</a><br>
+    Distributed by <a href="https://cloudsters.net" target="_blank">cloudsters</a> · 
+    <a href="https://github.com/Commons-OS" target="_blank">GitHub</a>
+  </p>
 </div>

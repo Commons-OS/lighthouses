@@ -156,7 +156,7 @@ layout: default
 </style>
 
 <div class="lighthouse-hero">
-  <div class="category-badge">🗼 {{ page.category | default: "Lighthouse" }}</div>
+  <div class="category-badge">🏠 {{ page.category | default: "Lighthouse" }}</div>
   <h1>{{ page.title }}</h1>
   {% if page.tagline %}
   <p class="tagline">{{ page.tagline }}</p>
@@ -206,7 +206,7 @@ layout: default
     <h3>⚙️ Commons Patterns Used</h3>
     <div class="pattern-tags">
       {% for pattern in page.patterns_used %}
-      <a href="/patterns/domain/{{ pattern | slugify }}/" class="pattern-tag">{{ pattern }}</a>
+      <span class="pattern-tag">{{ pattern }}</span>
       {% endfor %}
     </div>
   </div>
