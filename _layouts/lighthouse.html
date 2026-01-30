@@ -206,7 +206,7 @@ layout: default
     <h3>⚙️ Commons Patterns Used</h3>
     <div class="pattern-tags">
       {% for pattern in page.patterns_used %}
-      <span class="pattern-tag">{{ pattern }}</span>
+      <a href="/patterns/?search={{ pattern | url_encode }}" class="pattern-tag" data-pattern="{{ pattern }}">{{ pattern }}</a>
       {% endfor %}
     </div>
   </div>
