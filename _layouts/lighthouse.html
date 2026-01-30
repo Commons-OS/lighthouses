@@ -299,7 +299,7 @@ layout: default
     <p id="modal-pattern-name" class="pattern-name"></p>
     <p class="modal-desc">This pattern isn't documented yet in Commons OS. Would you like to suggest it?</p>
     <div class="modal-buttons">
-      <a id="modal-suggest-link" href="#" target="_blank" class="suggest-btn">⬡ Suggest This Pattern</a>
+      <a id="modal-suggest-link" href="#" class="suggest-btn">⬡ Suggest This Pattern</a>
       <button onclick="document.getElementById('pattern-modal').classList.remove('active')" class="cancel-btn">Cancel</button>
     </div>
   </div>
@@ -340,9 +340,10 @@ document.querySelectorAll('.pattern-tag').forEach(tag => {
       // Pattern doesn't exist - show suggestion modal
       const modal = document.getElementById('pattern-modal');
       document.getElementById('modal-pattern-name').textContent = '"' + patternName + '"';
-      const suggestUrl = 'https://github.com/Commons-OS/patterns/issues/new?title=[Pattern Suggestion] ' + 
+      // Link to suggestion form instead of GitHub
+      const suggestUrl = '/suggest/?type=pattern&name=' + 
         encodeURIComponent(patternName) + 
-        '&body=' + encodeURIComponent("I'd like to suggest documenting this pattern: " + patternName + "\n\nDiscovered from: " + window.location.href + "\n\nDescription:\n\nWhy this pattern matters:");
+        '&source=' + encodeURIComponent(window.location.href);
       document.getElementById('modal-suggest-link').href = suggestUrl;
       modal.classList.add('active');
     }
