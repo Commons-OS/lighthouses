@@ -1,19 +1,44 @@
----
-layout: null
----
 [
-{% assign all_lighthouses = site.organizations | concat: site.cities %}
-{% for item in all_lighthouses %}
   {
-    "title": {{ item.title | jsonify }},
-    "url": "{{ item.url }}",
-    "description": {{ item.description | jsonify }},
-    "category": {{ item.category | jsonify }},
-    "country": {{ item.country | jsonify }},
-    "sector": {{ item.sector | default: "" | jsonify }},
-    "population": {{ item.population | default: "" | jsonify }},
-    "tags": {{ item.tags | default: "" | jsonify }},
-    "patterns_used": {{ item.patterns_used | default: "" | jsonify }}
-  }{% unless forloop.last %},{% endunless %}
-{% endfor %}
+    "title": "Buurtzorg",
+    "url": "/lighthouses/buurtzorg/",
+    "type": "lighthouse",
+    "category": "organization",
+    "tags": ["healthcare", "netherlands", "self-management"]
+  },
+  {
+    "title": "Patagonia",
+    "url": "/lighthouses/patagonia/",
+    "type": "lighthouse",
+    "category": "organization",
+    "tags": ["retail", "usa", "purpose-driven"]
+  },
+  {
+    "title": "Mondragon",
+    "url": "/lighthouses/mondragon/",
+    "type": "lighthouse",
+    "category": "organization",
+    "tags": ["cooperative", "spain", "worker-owned"]
+  },
+  {
+    "title": "Vienna",
+    "url": "/lighthouses/vienna/",
+    "type": "lighthouse",
+    "category": "city",
+    "tags": ["housing", "austria", "social-housing"]
+  },
+  {
+    "title": "Barcelona",
+    "url": "/lighthouses/barcelona/",
+    "type": "lighthouse",
+    "category": "city",
+    "tags": ["digital", "spain", "participatory"]
+  },
+  {
+    "title": "Oslo",
+    "url": "/lighthouses/oslo/",
+    "type": "lighthouse",
+    "category": "city",
+    "tags": ["climate", "norway", "sustainability"]
+  }
 ]

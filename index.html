@@ -20,26 +20,10 @@ title: Lighthouse Engine - Commons OS
     margin: -40px -20px 40px -20px;
   }
   
-  .hero .icon {
-    font-size: 4em;
-    margin-bottom: 20px;
-  }
-  
-  .hero h1 {
-    font-size: 2.8em;
-    margin: 0 0 15px 0;
-    font-weight: 300;
-  }
-  
-  .hero .tagline {
-    font-size: 1.3em;
-    color: rgba(255,255,255,0.9);
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
+  .hero .icon { font-size: 4em; margin-bottom: 20px; }
+  .hero h1 { font-size: 2.8em; margin: 0 0 15px 0; font-weight: 300; }
+  .hero .tagline { font-size: 1.3em; color: rgba(255,255,255,0.9); max-width: 700px; margin: 0 auto; line-height: 1.6; }
 
-  /* Stats Bar */
   .stats-bar {
     display: flex;
     justify-content: center;
@@ -52,77 +36,51 @@ title: Lighthouse Engine - Commons OS
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
   }
   
-  .stat {
-    text-align: center;
-  }
-  
+  .stat { text-align: center; }
   .stat .circle {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 10px;
-    font-size: 1.6em;
-    font-weight: 700;
-    color: white;
-    background: var(--lighthouse-green);
+    width: 80px; height: 80px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 10px; font-size: 1.6em; font-weight: 700;
+    color: white; background: var(--lighthouse-green);
   }
-  
-  .stat .label {
-    color: var(--text-muted);
-    font-size: 0.9em;
-    font-weight: 500;
-  }
+  .stat .label { color: var(--text-muted); font-size: 0.9em; font-weight: 500; }
 
-  .section {
-    margin-bottom: 60px;
-  }
-  
-  .section-header {
+  .filter-bar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  
-  .section-header h2 {
-    font-size: 1.8em;
-    color: var(--text-dark);
-    margin: 0;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   }
   
-  .section-header h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: var(--lighthouse-green);
-    margin-top: 10px;
-    border-radius: 2px;
+  .filter-btn {
+    padding: 8px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.2s ease;
   }
   
-  .section-header .count-badge {
+  .filter-btn:hover, .filter-btn.active {
+    border-color: var(--lighthouse-green);
     background: var(--lighthouse-light);
     color: var(--lighthouse-dark);
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 0.9em;
-    font-weight: 600;
   }
-  
-  .section .subtitle {
-    color: var(--text-muted);
-    font-size: 1.1em;
-    margin-bottom: 30px;
+
+  .intro-box {
+    background: var(--lighthouse-light);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 40px;
+    border-left: 5px solid var(--lighthouse-green);
   }
+  .intro-box p { margin: 0; font-size: 1.1em; line-height: 1.8; color: var(--text-dark); }
+  .intro-box strong { color: var(--lighthouse-dark); }
 
   .lighthouse-grid {
     display: grid;
@@ -160,22 +118,10 @@ title: Lighthouse Engine - Commons OS
     margin-bottom: 8px;
   }
   
-  .lighthouse-card .card-header h3 {
-    margin: 0;
-    font-size: 1.4em;
-    font-weight: 500;
-  }
+  .lighthouse-card .card-header h3 { margin: 0; font-size: 1.4em; font-weight: 500; }
   
-  .lighthouse-card .card-body {
-    padding: 20px 25px;
-  }
-  
-  .lighthouse-card .card-body p {
-    color: var(--text-muted);
-    font-size: 0.95em;
-    line-height: 1.6;
-    margin: 0 0 15px 0;
-  }
+  .lighthouse-card .card-body { padding: 20px 25px; }
+  .lighthouse-card .card-body p { color: var(--text-muted); font-size: 0.95em; line-height: 1.6; margin: 0 0 15px 0; }
   
   .lighthouse-card .card-meta {
     display: flex;
@@ -184,73 +130,10 @@ title: Lighthouse Engine - Commons OS
     border-top: 1px solid #eee;
   }
   
-  .lighthouse-card .meta-item {
-    font-size: 0.85em;
-  }
-  
-  .lighthouse-card .meta-item .label {
-    color: #999;
-  }
-  
-  .lighthouse-card .meta-item .value {
-    color: var(--text-dark);
-    font-weight: 500;
-  }
+  .lighthouse-card .meta-item { font-size: 0.85em; }
+  .lighthouse-card .meta-item .label { color: #999; }
+  .lighthouse-card .meta-item .value { color: var(--text-dark); font-weight: 500; }
 
-  .intro-box {
-    background: var(--lighthouse-light);
-    border-radius: 16px;
-    padding: 30px;
-    margin-bottom: 40px;
-    border-left: 5px solid var(--lighthouse-green);
-  }
-  
-  .intro-box p {
-    margin: 0;
-    font-size: 1.1em;
-    line-height: 1.8;
-    color: var(--text-dark);
-  }
-  
-  .intro-box strong {
-    color: var(--lighthouse-dark);
-  }
-
-  .cta-section {
-    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
-    border-radius: 16px;
-    padding: 40px;
-    text-align: center;
-    margin-top: 40px;
-  }
-  
-  .cta-section h3 {
-    margin: 0 0 15px 0;
-    color: var(--text-dark);
-  }
-  
-  .cta-section p {
-    color: var(--text-muted);
-    margin-bottom: 25px;
-  }
-  
-  .cta-section a {
-    display: inline-block;
-    padding: 14px 32px;
-    background: var(--lighthouse-green);
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-  }
-  
-  .cta-section a:hover {
-    background: var(--lighthouse-dark);
-    transform: translateY(-2px);
-  }
-
-  /* Footer */
   .home-footer {
     text-align: center;
     padding: 40px 20px;
@@ -258,15 +141,8 @@ title: Lighthouse Engine - Commons OS
     border-top: 1px solid #eee;
     margin-top: 50px;
   }
-  
-  .home-footer a {
-    color: var(--lighthouse-green);
-    text-decoration: none;
-  }
-  
-  .home-footer a:hover {
-    text-decoration: underline;
-  }
+  .home-footer a { color: var(--lighthouse-green); text-decoration: none; }
+  .home-footer a:hover { text-decoration: underline; }
 </style>
 
 <div class="hero">
@@ -275,14 +151,16 @@ title: Lighthouse Engine - Commons OS
   <p class="tagline">Organizations and cities leading the way in commons. Real-world examples that prove another way is possible.</p>
 </div>
 
-<!-- Stats Bar -->
+{% assign orgs = site.lighthouses | where: "type", "organization" %}
+{% assign cities = site.lighthouses | where: "type", "city" %}
+
 <div class="stats-bar">
   <div class="stat">
-    <div class="circle">{{ site.organizations | size }}</div>
+    <div class="circle">{{ orgs | size }}</div>
     <div class="label">Organizations</div>
   </div>
   <div class="stat">
-    <div class="circle">{{ site.cities | size }}</div>
+    <div class="circle">{{ cities | size }}</div>
     <div class="label">Cities</div>
   </div>
   <div class="stat">
@@ -297,85 +175,46 @@ title: Lighthouse Engine - Commons OS
   </p>
 </div>
 
-<div class="section">
-  <div class="section-header">
-    <h2>🏢 Organizations</h2>
-    <span class="count-badge">{{ site.organizations | size }} Lighthouses</span>
-  </div>
-  <p class="subtitle">Companies, cooperatives, and institutions embodying commons principles</p>
-  
-  <div class="lighthouse-grid">
-    {% for org in site.organizations %}
-    <a href="{{ site.baseurl }}{{ org.url }}" class="lighthouse-card">
-      <div class="card-header">
-        <div class="category">Organization</div>
-        <h3>{{ org.title }}</h3>
-      </div>
-      <div class="card-body">
-        <p>{{ org.description }}</p>
-        <div class="card-meta">
-          {% if org.country %}
-          <div class="meta-item">
-            <span class="label">Country:</span>
-            <span class="value">{{ org.country }}</span>
-          </div>
-          {% endif %}
-          {% if org.sector %}
-          <div class="meta-item">
-            <span class="label">Sector:</span>
-            <span class="value">{{ org.sector }}</span>
-          </div>
-          {% endif %}
+<div class="filter-bar">
+  <button class="filter-btn active" data-filter="all">All Lighthouses</button>
+  <button class="filter-btn" data-filter="organization">🏢 Organizations</button>
+  <button class="filter-btn" data-filter="city">🏙️ Cities</button>
+</div>
+
+<div class="lighthouse-grid" id="lighthouses-container">
+  {% for lighthouse in site.lighthouses %}
+  <a href="{{ site.baseurl }}{{ lighthouse.url }}" class="lighthouse-card" data-type="{{ lighthouse.type }}">
+    <div class="card-header">
+      <div class="category">{{ lighthouse.type | capitalize }}</div>
+      <h3>{{ lighthouse.title }}</h3>
+    </div>
+    <div class="card-body">
+      <p>{{ lighthouse.description }}</p>
+      <div class="card-meta">
+        {% if lighthouse.country %}
+        <div class="meta-item">
+          <span class="label">Country:</span>
+          <span class="value">{{ lighthouse.country }}</span>
         </div>
-      </div>
-    </a>
-    {% endfor %}
-  </div>
-</div>
-
-<div class="section">
-  <div class="section-header">
-    <h2>🏙️ Cities</h2>
-    <span class="count-badge">{{ site.cities | size }} Lighthouses</span>
-  </div>
-  <p class="subtitle">Urban areas pioneering commons-based governance and infrastructure</p>
-  
-  <div class="lighthouse-grid">
-    {% for city in site.cities %}
-    <a href="{{ site.baseurl }}{{ city.url }}" class="lighthouse-card">
-      <div class="card-header">
-        <div class="category">City</div>
-        <h3>{{ city.title }}</h3>
-      </div>
-      <div class="card-body">
-        <p>{{ city.description }}</p>
-        <div class="card-meta">
-          {% if city.country %}
-          <div class="meta-item">
-            <span class="label">Country:</span>
-            <span class="value">{{ city.country }}</span>
-          </div>
-          {% endif %}
-          {% if city.population %}
-          <div class="meta-item">
-            <span class="label">Population:</span>
-            <span class="value">{{ city.population }}</span>
-          </div>
-          {% endif %}
+        {% endif %}
+        {% if lighthouse.sector %}
+        <div class="meta-item">
+          <span class="label">Sector:</span>
+          <span class="value">{{ lighthouse.sector }}</span>
         </div>
+        {% endif %}
+        {% if lighthouse.population %}
+        <div class="meta-item">
+          <span class="label">Population:</span>
+          <span class="value">{{ lighthouse.population }}</span>
+        </div>
+        {% endif %}
       </div>
-    </a>
-    {% endfor %}
-  </div>
+    </div>
+  </a>
+  {% endfor %}
 </div>
 
-<div class="cta-section">
-  <h3>Know a Lighthouse?</h3>
-  <p>Help us document organizations and cities that embody commons patterns.</p>
-  <a href="https://github.com/Commons-OS/lighthouses/issues/new?template=suggest-lighthouse.md&title=[Lighthouse Suggestion]" target="_blank">Suggest a Lighthouse</a>
-</div>
-
-<!-- Footer -->
 <div class="home-footer">
   <p>
     Commons OS is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC-BY-SA-4.0</a><br>
@@ -383,3 +222,21 @@ title: Lighthouse Engine - Commons OS
     <a href="https://github.com/Commons-OS" target="_blank">GitHub</a>
   </p>
 </div>
+
+<script>
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.lighthouse-card').forEach(card => {
+      if (filter === 'all' || card.dataset.type === filter) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+</script>

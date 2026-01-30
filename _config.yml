@@ -1,46 +1,38 @@
+# Commons OS Lighthouse Engine - Jekyll Configuration
 title: Commons OS Lighthouse Engine
 description: Organizations and cities leading the way in commons
 url: "https://commons-os.github.io"
 baseurl: "/lighthouses"
 
+# Repository info
+repository: commons-os/lighthouses
+
+# Attribution
+author:
+  name: cloudsters
+  url: https://cloudsters.net
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
 
-# Collections
+# Single flat collection for all lighthouses
 collections:
-  organizations:
+  lighthouses:
     output: true
-    permalink: /:collection/:slug/
-  cities:
-    output: true
-    permalink: /:collection/:slug/
+    permalink: /:name/
 
-# Defaults
+# Default front matter for lighthouses
 defaults:
   - scope:
       path: ""
-      type: "organizations"
+      type: "lighthouses"
     values:
       layout: "lighthouse"
-      category: "organization"
-  - scope:
-      path: ""
-      type: "cities"
-    values:
-      layout: "lighthouse"
-      category: "city"
-  - scope:
-      path: ""
-    values:
-      layout: "default"
 
 # Exclude from build
 exclude:
-  - README.md
-  - LICENSE
   - Gemfile
   - Gemfile.lock
   - node_modules
   - vendor
-
