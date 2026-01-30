@@ -1,0 +1,278 @@
+---
+layout: default
+title: Lighthouse Engine - Commons OS
+---
+
+<style>
+  :root {
+    --lighthouse-green: #4caf50;
+    --lighthouse-dark: #2e7d32;
+    --lighthouse-light: #e8f5e9;
+    --text-dark: #333;
+    --text-muted: #666;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+    color: white;
+    margin: -40px -20px 40px -20px;
+  }
+  
+  .hero .icon {
+    font-size: 4em;
+    margin-bottom: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 2.8em;
+    margin: 0 0 15px 0;
+    font-weight: 300;
+  }
+  
+  .hero .tagline {
+    font-size: 1.3em;
+    color: rgba(255,255,255,0.9);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .section {
+    margin-bottom: 60px;
+  }
+  
+  .section h2 {
+    font-size: 1.8em;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  .section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--lighthouse-green);
+    margin-top: 10px;
+    border-radius: 2px;
+  }
+  
+  .section .subtitle {
+    color: var(--text-muted);
+    font-size: 1.1em;
+    margin-bottom: 30px;
+  }
+
+  .lighthouse-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+  }
+  
+  .lighthouse-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  
+  .lighthouse-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  }
+  
+  .lighthouse-card .card-header {
+    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+    color: white;
+    padding: 25px;
+  }
+  
+  .lighthouse-card .card-header .category {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    margin-bottom: 8px;
+  }
+  
+  .lighthouse-card .card-header h3 {
+    margin: 0;
+    font-size: 1.4em;
+    font-weight: 500;
+  }
+  
+  .lighthouse-card .card-body {
+    padding: 20px 25px;
+  }
+  
+  .lighthouse-card .card-body p {
+    color: var(--text-muted);
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin: 0 0 15px 0;
+  }
+  
+  .lighthouse-card .card-meta {
+    display: flex;
+    gap: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+  }
+  
+  .lighthouse-card .meta-item {
+    font-size: 0.85em;
+  }
+  
+  .lighthouse-card .meta-item .label {
+    color: #999;
+  }
+  
+  .lighthouse-card .meta-item .value {
+    color: var(--text-dark);
+    font-weight: 500;
+  }
+
+  .intro-box {
+    background: var(--lighthouse-light);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 40px;
+    border-left: 5px solid var(--lighthouse-green);
+  }
+  
+  .intro-box p {
+    margin: 0;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: var(--text-dark);
+  }
+  
+  .intro-box strong {
+    color: var(--lighthouse-dark);
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .cta-section h3 {
+    margin: 0 0 15px 0;
+    color: var(--text-dark);
+  }
+  
+  .cta-section p {
+    color: var(--text-muted);
+    margin-bottom: 25px;
+  }
+  
+  .cta-section a {
+    display: inline-block;
+    padding: 14px 32px;
+    background: var(--lighthouse-green);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-section a:hover {
+    background: var(--lighthouse-dark);
+    transform: translateY(-2px);
+  }
+</style>
+
+<div class="hero">
+  <div class="icon">🗼</div>
+  <h1>Lighthouse Engine</h1>
+  <p class="tagline">Organizations and cities leading the way in commons. Real-world examples that prove another way is possible.</p>
+</div>
+
+<div class="intro-box">
+  <p>
+    <strong>Lighthouses guide ships through dangerous waters.</strong> These organizations and cities guide us through the transition to commons-based systems. They're not perfect — no one is — but they show what's possible when you apply commons patterns with intention and persistence.
+  </p>
+</div>
+
+<div class="section">
+  <h2>🏢 Organizations</h2>
+  <p class="subtitle">Companies, cooperatives, and institutions embodying commons principles</p>
+  
+  <div class="lighthouse-grid">
+    {% for org in site.organizations %}
+    <a href="{{ org.url }}" class="lighthouse-card">
+      <div class="card-header">
+        <div class="category">Organization</div>
+        <h3>{{ org.title }}</h3>
+      </div>
+      <div class="card-body">
+        <p>{{ org.description }}</p>
+        <div class="card-meta">
+          {% if org.country %}
+          <div class="meta-item">
+            <span class="label">Country:</span>
+            <span class="value">{{ org.country }}</span>
+          </div>
+          {% endif %}
+          {% if org.sector %}
+          <div class="meta-item">
+            <span class="label">Sector:</span>
+            <span class="value">{{ org.sector }}</span>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="section">
+  <h2>🏙️ Cities</h2>
+  <p class="subtitle">Urban areas pioneering commons-based governance and infrastructure</p>
+  
+  <div class="lighthouse-grid">
+    {% for city in site.cities %}
+    <a href="{{ city.url }}" class="lighthouse-card">
+      <div class="card-header">
+        <div class="category">City</div>
+        <h3>{{ city.title }}</h3>
+      </div>
+      <div class="card-body">
+        <p>{{ city.description }}</p>
+        <div class="card-meta">
+          {% if city.country %}
+          <div class="meta-item">
+            <span class="label">Country:</span>
+            <span class="value">{{ city.country }}</span>
+          </div>
+          {% endif %}
+          {% if city.population %}
+          <div class="meta-item">
+            <span class="label">Population:</span>
+            <span class="value">{{ city.population }}</span>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="cta-section">
+  <h3>Know a Lighthouse?</h3>
+  <p>Help us document organizations and cities that embody commons patterns.</p>
+  <a href="https://github.com/Commons-OS/lighthouses/issues/new" target="_blank">Suggest a Lighthouse</a>
+</div>

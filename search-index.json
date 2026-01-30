@@ -1,0 +1,19 @@
+---
+layout: null
+---
+[
+{% assign all_lighthouses = site.organizations | concat: site.cities %}
+{% for item in all_lighthouses %}
+  {
+    "title": {{ item.title | jsonify }},
+    "url": "{{ item.url }}",
+    "description": {{ item.description | jsonify }},
+    "category": {{ item.category | jsonify }},
+    "country": {{ item.country | jsonify }},
+    "sector": {{ item.sector | default: "" | jsonify }},
+    "population": {{ item.population | default: "" | jsonify }},
+    "tags": {{ item.tags | default: "" | jsonify }},
+    "patterns_used": {{ item.patterns_used | default: "" | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]

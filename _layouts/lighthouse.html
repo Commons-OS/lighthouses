@@ -1,0 +1,225 @@
+---
+layout: default
+---
+
+<style>
+  :root {
+    --lighthouse-green: #4caf50;
+    --lighthouse-light: #e8f5e9;
+    --text-dark: #333;
+    --text-muted: #666;
+  }
+
+  .lighthouse-hero {
+    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+    color: white;
+    padding: 60px 20px;
+    margin: -40px -20px 40px -20px;
+    text-align: center;
+  }
+  
+  .lighthouse-hero .category-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    font-size: 0.85em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .lighthouse-hero h1 {
+    font-size: 3em;
+    margin: 0 0 15px 0;
+    font-weight: 300;
+  }
+  
+  .lighthouse-hero .tagline {
+    font-size: 1.3em;
+    color: rgba(255,255,255,0.9);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .lighthouse-meta {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  
+  .lighthouse-meta-item {
+    text-align: center;
+  }
+  
+  .lighthouse-meta-item .value {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+  
+  .lighthouse-meta-item .label {
+    font-size: 0.85em;
+    color: rgba(255,255,255,0.7);
+  }
+
+  .lighthouse-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .lighthouse-content h2 {
+    color: var(--lighthouse-green);
+    border-bottom-color: var(--lighthouse-light);
+    margin-top: 2em;
+  }
+  
+  .lighthouse-content h2:first-child {
+    margin-top: 0;
+  }
+
+  /* Patterns Used Section */
+  .patterns-used {
+    background: var(--lighthouse-light);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 30px 0;
+  }
+  
+  .patterns-used h3 {
+    color: var(--lighthouse-green);
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .pattern-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .pattern-tag {
+    display: inline-block;
+    padding: 8px 16px;
+    background: white;
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 0.9em;
+    transition: all 0.2s ease;
+    border: 1px solid #ddd;
+  }
+  
+  .pattern-tag:hover {
+    background: var(--lighthouse-green);
+    color: white;
+    border-color: var(--lighthouse-green);
+  }
+
+  /* Sources Section */
+  .sources-section {
+    background: #f5f5f5;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 30px 0;
+  }
+  
+  .sources-section h3 {
+    margin-top: 0;
+    color: var(--text-dark);
+  }
+  
+  .sources-section ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+  
+  .sources-section a {
+    color: var(--lighthouse-green);
+  }
+
+  /* Back link */
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--lighthouse-green);
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<div class="lighthouse-hero">
+  <div class="category-badge">🗼 {{ page.category | default: "Lighthouse" }}</div>
+  <h1>{{ page.title }}</h1>
+  {% if page.tagline %}
+  <p class="tagline">{{ page.tagline }}</p>
+  {% endif %}
+  
+  <div class="lighthouse-meta">
+    {% if page.country %}
+    <div class="lighthouse-meta-item">
+      <div class="value">{{ page.country }}</div>
+      <div class="label">Country</div>
+    </div>
+    {% endif %}
+    {% if page.sector %}
+    <div class="lighthouse-meta-item">
+      <div class="value">{{ page.sector }}</div>
+      <div class="label">Sector</div>
+    </div>
+    {% endif %}
+    {% if page.founded %}
+    <div class="lighthouse-meta-item">
+      <div class="value">{{ page.founded }}</div>
+      <div class="label">Founded</div>
+    </div>
+    {% endif %}
+    {% if page.employees %}
+    <div class="lighthouse-meta-item">
+      <div class="value">{{ page.employees }}</div>
+      <div class="label">Employees</div>
+    </div>
+    {% endif %}
+    {% if page.population %}
+    <div class="lighthouse-meta-item">
+      <div class="value">{{ page.population }}</div>
+      <div class="label">Population</div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<div class="lighthouse-content">
+  <a href="{{ site.baseurl }}/" class="back-link">← Back to all Lighthouses</a>
+  
+  {{ content }}
+  
+  {% if page.patterns_used %}
+  <div class="patterns-used">
+    <h3>⚙️ Commons Patterns Used</h3>
+    <div class="pattern-tags">
+      {% for pattern in page.patterns_used %}
+      <a href="/patterns/domain/{{ pattern | slugify }}/" class="pattern-tag">{{ pattern }}</a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+  
+  {% if page.sources %}
+  <div class="sources-section">
+    <h3>📚 Sources & Further Reading</h3>
+    <ul>
+      {% for source in page.sources %}
+      <li><a href="{{ source.url }}" target="_blank">{{ source.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</div>

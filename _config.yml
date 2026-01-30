@@ -1,0 +1,45 @@
+title: Commons OS Lighthouse Engine
+description: Organizations and cities leading the way in commons
+url: "https://commons-os.github.io"
+baseurl: "/lighthouses"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Collections
+collections:
+  organizations:
+    output: true
+    permalink: /organizations/:slug/
+  cities:
+    output: true
+    permalink: /cities/:slug/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "organizations"
+    values:
+      layout: "lighthouse"
+      category: "organization"
+  - scope:
+      path: ""
+      type: "cities"
+    values:
+      layout: "lighthouse"
+      category: "city"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Exclude from build
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
