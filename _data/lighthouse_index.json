@@ -1,0 +1,172 @@
+{
+  "generated_at": "2026-01-31T15:31:19.206564Z",
+  "total_lighthouses": 6,
+  "by_type": {
+    "city": 3,
+    "organization": 3
+  },
+  "by_sector": {
+    "": 3,
+    "Healthcare": 1,
+    "Diversified (Industrial, Retail, Finance)": 1,
+    "Apparel & Retail": 1
+  },
+  "lighthouses": [
+    {
+      "slug": "barcelona",
+      "title": "Barcelona",
+      "tagline": "Digital sovereignty and participatory democracy",
+      "description": "A Mediterranean city pioneering digital commons, participatory budgeting, and the \"fearless city\" movement.",
+      "type": "city",
+      "country": "Spain (Catalonia)",
+      "sector": "",
+      "founded": "",
+      "employees": "",
+      "patterns_used": [
+        "Digital Commons",
+        "Participatory Budgeting",
+        "Platform Cooperativism",
+        "Citizen Assemblies",
+        "Data Sovereignty",
+        "Municipalism"
+      ],
+      "tags": [
+        "digital",
+        "democracy",
+        "spain",
+        "technology"
+      ],
+      "file": "barcelona.md"
+    },
+    {
+      "slug": "buurtzorg",
+      "title": "Buurtzorg",
+      "tagline": "Revolutionizing healthcare through self-managing teams",
+      "description": "A Dutch home healthcare organization that transformed the industry through radical decentralization and nurse-led care teams.",
+      "type": "organization",
+      "country": "Netherlands",
+      "sector": "Healthcare",
+      "founded": 2006,
+      "employees": "15,000+",
+      "patterns_used": [
+        "Self-Managing Teams",
+        "Sociocracy",
+        "Neighborhood Care",
+        "Flat Organization",
+        "Purpose-Driven Work",
+        "Trust-Based Management"
+      ],
+      "tags": [
+        "healthcare",
+        "self-management",
+        "netherlands",
+        "nursing"
+      ],
+      "file": "buurtzorg.md"
+    },
+    {
+      "slug": "mondragon",
+      "title": "Mondragon Corporation",
+      "tagline": "The world's largest worker cooperative",
+      "description": "A federation of worker cooperatives in the Basque Country, demonstrating that democratic ownership can work at scale.",
+      "type": "organization",
+      "country": "Spain (Basque Country)",
+      "sector": "Diversified (Industrial, Retail, Finance)",
+      "founded": 1956,
+      "employees": "80,000+",
+      "patterns_used": [
+        "Worker Ownership",
+        "Democratic Governance",
+        "Solidarity Economics",
+        "Cooperative Federation",
+        "Internal Capital Accounts",
+        "Education Integration"
+      ],
+      "tags": [
+        "cooperative",
+        "worker-owned",
+        "spain",
+        "manufacturing"
+      ],
+      "file": "mondragon.md"
+    },
+    {
+      "slug": "oslo",
+      "title": "Oslo",
+      "tagline": "Europe's green capital",
+      "description": "Norway's capital leading the transition to zero-emission transport, car-free streets, and climate-positive urban development.",
+      "type": "city",
+      "country": "Norway",
+      "sector": "",
+      "founded": "",
+      "employees": "",
+      "patterns_used": [
+        "Climate Action Planning",
+        "Car-Free City Center",
+        "Electric Mobility",
+        "Green Public Procurement",
+        "Circular Economy",
+        "Nature-Based Solutions"
+      ],
+      "tags": [
+        "climate",
+        "transport",
+        "norway",
+        "sustainability"
+      ],
+      "file": "oslo.md"
+    },
+    {
+      "slug": "patagonia",
+      "title": "Patagonia",
+      "tagline": "We're in business to save our home planet",
+      "description": "An outdoor apparel company that pioneered environmental activism in business, now owned by a trust dedicated to fighting climate change.",
+      "type": "organization",
+      "country": "United States",
+      "sector": "Apparel & Retail",
+      "founded": 1973,
+      "employees": "3,000+",
+      "patterns_used": [
+        "Purpose-Driven Business",
+        "Stakeholder Governance",
+        "Regenerative Supply Chain",
+        "Radical Transparency",
+        "Environmental Activism",
+        "Benefit Corporation"
+      ],
+      "tags": [
+        "sustainability",
+        "outdoor",
+        "activism",
+        "b-corp"
+      ],
+      "file": "patagonia.md"
+    },
+    {
+      "slug": "vienna",
+      "title": "Vienna",
+      "tagline": "Social housing as urban commons",
+      "description": "The Austrian capital where 60% of residents live in subsidized housing, demonstrating that housing can be a public good, not a commodity.",
+      "type": "city",
+      "country": "Austria",
+      "sector": "",
+      "founded": "",
+      "employees": "",
+      "patterns_used": [
+        "Social Housing",
+        "Mixed-Income Communities",
+        "Public Land Banking",
+        "Tenant Participation",
+        "Quality Public Space",
+        "Integrated Urban Planning"
+      ],
+      "tags": [
+        "housing",
+        "social-democracy",
+        "austria",
+        "urban-planning"
+      ],
+      "file": "vienna.md"
+    }
+  ]
+}
