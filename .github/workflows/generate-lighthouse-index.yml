@@ -1,0 +1,37 @@
+name: Generate Lighthouse Index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '_lighthouses/**'
+  workflow_dispatch:
+
+jobs:
+  generate-index:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: pip install pyyaml
+      
+      - name: Generate lighthouse index
+        run: python scripts/generate_lighthouse_index.py
+      
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add _data/lighthouse_index.json
+          git diff --staged --quiet || git commit -m "Auto-update lighthouse index [skip ci]"
+          git push
